@@ -9,6 +9,8 @@ license = "Unlicense"
 publish = false
 repository = "https://github.com/substrate-developer-hub/substrate-node-template/"
 
+
+
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
 
@@ -47,6 +49,9 @@ pallet-transaction-payment-rpc-runtime-api = { version = "4.0.0-dev", default-fe
 pallet-contracts = { git = "https://github.com/paritytech/substrate", package = "pallet-contracts", default-features = false, branch = "polkadot-v0.9.39" }
 pallet-contracts-primitives = { git = "https://github.com/paritytech/substrate", package = "pallet-contracts-primitives", default-features = false, branch = "polkadot-v0.9.39" }
 
+
+# pallet-evm 
+pallet-evm = { git = "https://github.com/paritytech/frontier" , default-features = false, branch = "polkadot-v0.9.39" }
 
 # Used for runtime benchmarking
 frame-benchmarking = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", optional = true , branch = "polkadot-v0.9.39" }
@@ -94,6 +99,8 @@ std = [
 	"substrate-wasm-builder",
 	"pallet-contracts/std",
 	"pallet-contracts-primitives/std",
+	"pallet-evm/std",
+
 ]
 runtime-benchmarks = [
 	"frame-benchmarking/runtime-benchmarks",
